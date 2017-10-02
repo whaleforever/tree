@@ -14,10 +14,9 @@ def mktree(node, child):
     elif isinstance(child,dict):
         for k,v in child.items():
             if isinstance(v, dict):
-                node.addkid(Node(k))
-                return mktree(node,v)
+                node.addkid(Node(k))                
             else:
-                node.addkid(Node(k))
+                node.addkid(Node(v))
 
 
 def handle_dict(dictionary):
