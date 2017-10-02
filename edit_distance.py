@@ -8,20 +8,18 @@ def json_open(fl):
     return d
 
 def mktree(node, child):
-
-    if not isinstance(child, dict ) and not isinstance(child, list):
-        return node.addkid(Node(child))
-
-
-    if isinstance(child, dict):
-        print ("test")
-        for k,v in child.items():
-            print ("tttt",k,v)
-            node.addkid(Node(v))
-    else:
+    def mktree(node,child):
+    if isinstance(child,list):
         for c in child:
-            print (c)
             return mktree(node,c)
+    elif isinstance(child,dict):
+        for k,v in child.items():
+    if isinstance(v, dict):
+        node.addkid(Node(k))
+        return mktree(node,v)
+    else:
+        node.addkid(Node(k))
+
 
 def handle_dict(dictionary):
     for k in dictionary:
