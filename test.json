@@ -1,0 +1,50 @@
+[
+    {
+        "nodeType": "Expr_Assign",
+        "var": {
+            "nodeType": "Expr_Variable",
+            "name": "ref",
+            "attributes": []
+        },
+        "expr": {
+            "nodeType": "Expr_FuncCall",
+            "name": {
+                "nodeType": "Name",
+                "parts": [
+                    "GETPOST"
+                ],
+                "attributes": []
+            },
+            "args": [
+                {
+                    "nodeType": "Arg",
+                    "value": {
+                        "nodeType": "Scalar_String",
+                        "value": "ref",
+                        "attributes": {
+                            "kind": 1
+                        }
+                    },
+                    "byRef": false,
+                    "unpack": false,
+                    "attributes": []
+                },
+                {
+                    "nodeType": "Arg",
+                    "value": {
+                        "nodeType": "Scalar_String",
+                        "value": "alpha",
+                        "attributes": {
+                            "kind": 1
+                        }
+                    },
+                    "byRef": false,
+                    "unpack": false,
+                    "attributes": []
+                }
+            ],
+            "attributes": []
+        },
+        "attributes": []
+    }
+]
