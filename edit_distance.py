@@ -15,7 +15,7 @@ def mktree(node, child):
         for k,v in child.items():
             if isinstance(v, dict):
                 node.addkid(Node(k))                
-            else:
+            elif len(v) > 0:
                 node.addkid(Node(v))
 
 
