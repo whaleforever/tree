@@ -7,8 +7,7 @@ def json_open(fl):
         d = json.load(f)
     return d
 
-def mktree(node, child):
-    def mktree(node,child):
+def mktree(node, child):    
     if isinstance(child,list):
         for c in child:
             return mktree(node,c)
