@@ -7,16 +7,22 @@ def json_open(fl):
         d = json.load(f)
     return d
 
-def mktree(node, child):    
+def mktree(node, child,count=0):
+    print (count)    
     if isinstance(child,list):
         for c in child:
-            return mktree(node,c)
+            count+=1
+            return mktree(node,c,count)
+    
     elif isinstance(child,dict):
         for k,v in child.items():
-            if isinstance(v, dict):
-                node.addkid(Node(k))                
-            elif len(v) > 0:
-                node.addkid(Node(v))
+            if isinstance(child[k], dict):
+                node.addkid(Node(k)) 
+                return mktree(node,v, count)
+            else :
+                node.addkid(Node(v))                          
+#(Node("f").addkid(Node("a").addkid(Node("h")).addkid(Node("c").addkid(Node("l")))).addkid(Node("e"))
+
 
 
 def handle_dict(dictionary):
