@@ -29,7 +29,7 @@ def loop_tree(dictionary, node):
     print "----"
     for k,v in dictionary.iteritems():
         if isinstance(dictionary[k], dict):
-            loop_tree(dictionary[k], node.addkid(k))
+            loop_tree(dictionary[k], node.addkid(Node(k)))
         else:
             node.addkid(Node(v))
             # print k,v
